@@ -58,7 +58,7 @@ interact with the interpreter.
 Let's take a closer look at the elements of the REPL:
 
 - `>>>` is the interpreter prompt for starting a new statement.
-- `...` is the interpreter prompt for continuing a statements. Enter a blank line to finish typing and run the statements.
+- `...` is the interpreter prompt for continuing a statement. Enter a blank line to finish typing and run what you've entered.
 
 The `...` prompt may or may not be shown depending on your environment. For this course,
 it is shown as blanks to make it easier to cut/paste code samples.
@@ -241,7 +241,7 @@ while num_bills * bill_thickness < sears_height:
     day = day + 1
     num_bills = num_bills * 2
 
-print('Number of days', days)
+print('Number of days', day)
 ```
 
 The statements indented below the `while` will execute as long as the expression after the `while` is `true`.
@@ -257,7 +257,7 @@ while num_bills * bill_thickness < sears_height:
     day = day + 1
     num_bills = num_bills * 2
 
-print('Number of days', days)
+print('Number of days', day)
 ```
 
 Indentation groups the following statements together as the operations that repeat:

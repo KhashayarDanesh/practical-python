@@ -77,7 +77,7 @@ c = -1.345e-10
 Floats are represented as double precision using the native CPU representation [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754).
 This is the same as the `double` type in the programming language C.
 
-> 17 digits or precision
+> 17 digits of precision  
 > Exponent from -308 to 308
 
 Be aware that floating point numbers are inexact when representing decimals.
@@ -106,7 +106,7 @@ x ** y     Power
 abs(x)     Absolute Value
 ```
 
-Theses are the same operators as Integers, except for the bit-wise operators.
+These are the same operators as Integers, except for the bit-wise operators.
 Additional math functions are found in the `math` module.
 
 ```python
@@ -213,14 +213,14 @@ Modify the program so that extra payment information can be more generally handl
 Make it so that the user can set these variables:
 
 ```python
-extra_payment_start_month = 60
+extra_payment_start_month = 61
 extra_payment_end_month = 108
 extra_payment = 1000
 ```
 
 Make the program look at these variables and calculate the total paid appropriately.
 
-How much will Dave pay if he pays an extra $1000/month for 4 years starting in year 5 of the mortgage?
+How much will Dave pay if he pays an extra $1000/month for 4 years starting in year 5 of the mortgage?  
 
 ### Exercise 1.10: Making a table
 
@@ -234,15 +234,16 @@ The output should look something like this:
 4 10736.44 497581.83
 5 13420.55 496970.98
 ...
-308 875705.88 674.44
-309 878389.99 -2006.86
-Total paid 878389.99
-Months 309
+308 874705.88 3478.83
+309 877389.99 809.21
+310 880074.1 -1871.53
+Total paid 880074.1
+Months 310
 ```
 
 ### Exercise 1.11: Bonus
 
-While you’re at it, fix the program to correct the for overpayment that occurs in the last month.
+While you’re at it, fix the program to correct for the overpayment that occurs in the last month.
 
 ### Exercise 1.12: A Mystery
 

@@ -94,7 +94,9 @@ One approach: introduce accessor methods.
 ```python
 class Stock:
     def __init__(self, name, shares, price):
-        self.name = name self.set_shares(shares) self.price = price
+        self.name = name
+	    self.set_shares(shares)
+	    self.price = price
 
     # Function that layers the "get" operation
     def get_shares(self):
@@ -212,7 +214,7 @@ can fix this.
 
 ### Decorator Syntax
 
-The `@` syntax is known as *decoration".  It specifies a modifier
+The `@` syntax is known as "decoration".  It specifies a modifier
 that's applied to the function definition that immediately follows.
 
 ```python

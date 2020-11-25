@@ -98,8 +98,10 @@ There are some common functions to reduce a sequence to a single value.
 >>> s = [1, 2, 3, 4]
 >>> sum(s)
 10
->>> min(s) 1
->>> max(s) 4
+>>> min(s)
+1
+>>> max(s)
+4
 >>> t = ['Hello', 'World']
 >>> max(t)
 'World'
@@ -240,7 +242,7 @@ for x, y in points:
 ```
 
 When using multiple variables, each tuple is *unpacked* into a set of iteration variables.
-The number of variables must match the of items in each tuple.
+The number of variables must match the number of items in each tuple.
 
 ### zip() function
 
@@ -463,7 +465,7 @@ The change made here is subtle, but significant.  Instead of
 the new version reads any CSV file and picks the values of interest
 out of it.  As long as the file has the required columns, the code will work.
 
-Modify the `report.py` program you wrote in Section 2.3 that it uses
+Modify the `report.py` program you wrote in Section 2.3 so that it uses
 the same technique to pick out column headers.
 
 Try running the `report.py` program on the `Data/portfoliodate.csv`

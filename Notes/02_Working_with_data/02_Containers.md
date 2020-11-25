@@ -52,9 +52,10 @@ An example when reading records from a file.
 records = []  # Initial empty list
 
 with open('Data/portfolio.csv', 'rt') as f:
+    next(f) # Skip header
     for line in f:
         row = line.split(',')
-        records.append((row[0], int(row[1])), float(row[2]))
+        records.append((row[0], int(row[1]), float(row[2])))
 ```
 
 ### Dicts as a Container
@@ -104,6 +105,11 @@ with open('Data/prices.csv', 'rt') as f:
         row = line.split(',')
         prices[row[0]] = float(row[1])
 ```
+
+Note: If you try this on the `Data/prices.csv` file, you'll find that
+it almost works--there's a blank line at the end that causes it to
+crash.  You'll need to figure out some way to modify the code to
+account for that (see Exercise 2.6).
 
 ### Dictionary Lookups
 
@@ -309,7 +315,7 @@ Experiment with this new function in the same manner as you did in
 Exercise 2.4.
 
 ```python
->>> portfolio = read_portfolio('portfolio.csv')
+>>> portfolio = read_portfolio('Data/portfolio.csv')
 >>> portfolio
 [{'name': 'AA', 'shares': 100, 'price': 32.2}, {'name': 'IBM', 'shares': 50, 'price': 91.1},
     {'name': 'CAT', 'shares': 150, 'price': 83.44}, {'name': 'MSFT', 'shares': 200, 'price': 51.23},
@@ -335,7 +341,7 @@ accessed by key names instead of numeric column numbers.  This is
 often preferred because the resulting code is easier to read later.
 
 Viewing large dictionaries and lists can be messy. To clean up the
-output for debugging, considering using the `pprint` function.
+output for debugging, consider using the `pprint` function.
 
 ```python
 >>> from pprint import pprint
@@ -437,9 +443,9 @@ interactively to make sure it works:
 ### Exercise 2.7: Finding out if you can retire
 
 Tie all of this work together by adding a few additional statements to
-your `report.py` program that compute gain/loss. These statements
+your `report.py` program that computes gain/loss. These statements
 should take the list of stocks in Exercise 2.5 and the dictionary of
-prices in Exercise 2.6 and computes the current value of the portfolio
+prices in Exercise 2.6 and compute the current value of the portfolio
 along with the gain/loss.
 
 [Contents](../Contents.md) \| [Previous (2.1 Datatypes)](01_Datatypes.md) \| [Next (2.3 Formatting)](03_Formatting.md)

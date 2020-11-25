@@ -52,13 +52,13 @@ Example:
 s = ('GOOG', 100, 490.1)
 ```
 
-Sometimes the `()` are ommitted in the syntax.
+Sometimes the `()` are omitted in the syntax.
 
 ```python
 s = 'GOOG', 100, 490.1
 ```
 
-Special cases (0-tuple, 1-typle).
+Special cases (0-tuple, 1-tuple).
 
 ```python
 t = ()            # An empty tuple
@@ -338,7 +338,7 @@ above. Change the number of shares to 75.
 ```python
 >>> d['shares'] = 75
 >>> d
-{'name': 'AA', 'shares': 75, 'price': 75}
+{'name': 'AA', 'shares': 75, 'price': 32.2 }
 >>>
 ```
 
